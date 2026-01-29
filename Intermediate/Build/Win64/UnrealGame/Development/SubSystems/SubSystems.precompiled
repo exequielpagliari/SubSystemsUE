@@ -1,0 +1,9 @@
+{
+	"OutputFiles": [
+		"..\\..\\..\\x64\\UnrealGame\\Development\\SubSystems\\Module.SubSystems.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\SubSystems\\AudioSubSystem.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\SubSystems\\GraphicsSubSystem.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\SubSystems\\SaveSubSystem.cpp.obj",
+		"..\\..\\..\\x64\\UnrealGame\\Development\\SubSystems\\SubSystems.cpp.obj"
+	]
+}
