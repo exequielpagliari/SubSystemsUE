@@ -1,0 +1,40 @@
+\doxysection{Graphics\+Sub\+System.\+h}
+\hypertarget{_graphics_sub_system_8h_source}{}\label{_graphics_sub_system_8h_source}\index{C:/Users/exepa/Desktop/SubSystemsUE/Source/SubSystems/Public/GraphicsSubSystem.h@{C:/Users/exepa/Desktop/SubSystemsUE/Source/SubSystems/Public/GraphicsSubSystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Subsystems/GameInstanceSubsystem.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}GraphicsSubSystem.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \ \ \ \ UCLASS(Abstract,\ Blueprintable)}
+\DoxyCodeLine{00013\ \ \ \ \ class\ SUBSYSTEMS\_API\ \mbox{\hyperlink{class_u_graphics_sub_system}{UGraphicsSubSystem}}\ :\ public\ UGameInstanceSubsystem}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ UWorld*\ GetWorld()\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsTemplate()\ ||\ !GetOuter())}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetOuter()-\/>GetWorld();}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ Begin\ USubsystem}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(FSubsystemCollectionBase\&\ Collection)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Deinitialize()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ End\ USubsystem}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Events"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}On\ Initialize"{}}))}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ ReceiveInitialize();}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Events"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}On\ Deinitialize"{}}))}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ ReceiveDeinitialize();}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+
+\end{DoxyCode}

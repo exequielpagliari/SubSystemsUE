@@ -1,0 +1,42 @@
+\doxysection{Audio\+Sub\+System.\+h}
+\hypertarget{_audio_sub_system_8h_source}{}\label{_audio_sub_system_8h_source}\index{C:/Users/exepa/Desktop/SubSystemsUE/Source/SubSystems/Public/AudioSubSystem.h@{C:/Users/exepa/Desktop/SubSystemsUE/Source/SubSystems/Public/AudioSubSystem.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ Fill\ out\ your\ copyright\ notice\ in\ the\ Description\ page\ of\ Project\ Settings.}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Subsystems/GameInstanceSubsystem.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}AudioSubSystem.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ UCLASS(Abstract,\ Blueprintable,BlueprintType)}
+\DoxyCodeLine{00013\ class\ SUBSYSTEMS\_API\ \mbox{\hyperlink{class_u_audio_sub_system}{UAudioSubSystem}}\ :\ public\ UGameInstanceSubsystem}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ UWorld*\ GetWorld()\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsTemplate()\ ||\ !GetOuter())}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetOuter()-\/>GetWorld();}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ ShouldCreateSubsystem(UObject*\ Outer)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Begin\ USubsystem}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Initialize(FSubsystemCollectionBase\&\ Collection)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Deinitialize()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ End\ USubsystem}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Events"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}On\ Initialize"{}}))}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ ReceiveInitialize();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ UFUNCTION(BlueprintImplementableEvent,\ Category\ =\ \textcolor{stringliteral}{"{}Events"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}On\ Deinitialize"{}}))}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ ReceiveDeinitialize();}
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}
